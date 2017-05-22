@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+		#code{
+			margin-top: 85px!important;
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code" style="margin-top: 85px!important " >
+				<span class="comments">雪莉</span><br />
+				<span class="space"/><span class="comments">无意间看到你的照片</span><br />
+				<span class="space"/><span class="comments">才知道，分开是没错的。</span><br />
+				<span class="space"/><span class="comments">这才是真正的你。</span><br />
+				<span class="space"/>没有我，你才是最幸福的。<br />
+				<span class="space"/>我就是那个开房玩电脑，事后抽烟玩手机，没事还爱给你大道理的loser<br />
+				<span class="space"/>所以我，不配拥有这一切。<br />
+				<span class="space"/>现在，<br />
+				<span class="space"/>箱子里有一部分，我来魔都之前，<br />
+				<span class="space"/>你给物品分类的小袋和贴在袋上的物品说明便签，<br />
+				<span class="space"/>包括皮带和钱包。<br />
+				<span class="space"/>你说等我学好编程，一定做一份属于我俩最浪漫的网页<br />
+				<span class="space"/>现在网页写好了，我也不再了。<br />
+				<span class="space"/>你总说要做我的小女人，可是你却扮演了五年的保姆，我却是永远长不大的孩子。<br />
+				<span class="space">五年，五年啊，都是习惯<br />
+				<span class="space"/>我开始渐渐忘记关于咱俩的纪念日，<br />
+				<span class="space"/>忘记了刚开始经常聊到深夜相拥而泣的深情，<br />
+				<span class="space"/>忘记回你消息，回你电话，仿佛一切理所应当。<br />
+				<span class="space"/>而恰恰最可怕的就是习惯。<br />
+				<span class="space"/>其实我早意识到问题的严重，只是想不出该怎么漂亮的结尾。</span> <br />
+				<span class="space"/>谢谢你陪我走了这么久。</span> <br />
+				<span class="space"/>...</span> <br />
+				<span class="keyword"/>我抢劫贩毒,都是为了你<br />
+				<span class="space"/>  我以为有了足够硬币就能和你在一起 <br />
+				<span class="space"/>没想到，最先离开的却是我自己 <br />
+				<br>
+				<span class="space"/>可以爱的时候请用力爱<br />
+				<span class="space"/>离开才能少一些感慨</span> <br />
+				<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+
+						<!--<div id="elapseClock"></div>-->
+					</div>
+					<div id="loveu">
+
+						<div class="signature">王泽良</div>
+						<div class="signature">2017.5.22</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2010, 10, 2);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "你的浏览器不支持HTML5!<br/>请使用谷歌浏览器或者360浏览器";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
